@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./movieStyle.css" />
+    <title>Test</title>
+</head>
+<body>
+
+    <header>
+        <form id="form">
+            <input type="text" id="search" class="search" placeholder="Search">
+        </form>
+  
+        <form id="genre">
+            <select name="list" id="list" accesskey="target">
+                <option value='none' selected>Choose Genre</option>
+            </select>
+            <input id= "go-button" type=button value="Go" onclick="goToNewPage()" />
+          </form>
+  
+    </header>
+
+    <main id="main"></main>
+
+    <br>
+    <br>
+    
+    <footer id="bottomButton">
+        <div>
+          <button id="previous">Prev</button>
+          <span id="current">1</span>
+          <button id="next">Next</button>
+        </div>
+    </footer>    
+
+    <script src="./movieScript.js"></script>
+</body>
+</html>
