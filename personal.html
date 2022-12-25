@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <h1>Shahir Jalal Portfolio</h1>
+    <img id="profileImage" src="https://github.com/ShahirJalal/ReferencePoint/raw/main/ProfilePhoto.jpg" alt="" width="300">
+    <h2>Eat -> Sleep -> Code -> Repeat</h2>
+
+    <form>
+        <select name="list" id="list" accesskey="target">
+            <option value='none' selected>Jump to Pages</option>
+            <option value="personal.html">Personal</option>
+            <option value="professional.html">Professional</option>
+            <option value="myWorks.html">My Works</option>
+        </select>
+        <input id="go-button" type=button value="Go" onclick="goToNewPage()" />
+    </form>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
