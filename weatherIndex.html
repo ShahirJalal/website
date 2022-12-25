@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #242a36;
+        }
+
+        #list {
+            background-color: #72829e;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            color: #fff;
+        }
+
+        #go-button {
+            background-color: #72829e;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            color: #fff;
+        }
+
+        #go-button:hover {
+            background-color: #bfc3f5;
+        }
+        
+        #meme {
+            border-radius: 10px;
+        }
+    </style>
+<body>
+    <img id="meme" src="https://github.com/ShahirJalal/ReferencePoint/raw/main/WeatherMeme.jpg" alt="" width="">
+
+    <form>
+        <select name="list" id="list" accesskey="target">
+            <option value='none' selected>Choose Apps</option>
+            <option value="movieIndex.html">Movie Review App</option>
+            <option value="weatherIndex.html">Weather App</option>
+        </select>
+        <input id="go-button" type=button value="Go" onclick="goToNewPage()" />
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
