@@ -1,0 +1,19 @@
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    }
+    
+    .carousel-item {
+    flex: 0 0 auto;
+    width: 30%;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    }
+    
+    .carousel-item iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    }
