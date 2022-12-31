@@ -52,6 +52,7 @@ function showMovies(movies) {
 }
 
 const overlayContent = document.getElementById('overlay-content');
+/* Open when someone clicks on the span element */
 function openNav(movie) {
     let id = movie.id
     fetch(BASE_URL + '/movie/'+ id + '/videos?'+API_KEY).then(res => res.json()).then(videoData => {
@@ -60,19 +61,43 @@ function openNav(movie) {
             document.getElementById("myNav").style.width = "100%";
             if(videoData.results.length > 0) {
                 var embed = [];
+               // var dots = []; //variable dots
                 videoData.results.forEach(video => {
                     let {name, key, site} = video
                     
                     if(site == "YouTube") {
 
                         embed.push(`
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                         `)
+                      
+                      //push for dots
+                      // dots.push(`
+                      //     <span class="dot">${idx + 1}</span>
+                      //   `)
 
                     }
                 })
+              
+              //untuk show video + slide
+//               var content = `
+//                 <h1 class="no-results">${movie.original_title}</h1>
+//                 <br/>
+
+//                 ${embed.join('')}
+//                 <br/>
+
+//                 <div class="dots">${dots.join('')}</div>
+
+//                 `
+//                 overlayContent.innerHTML = content;
+//                 activeSlide=0;
+//                 showVideos();
+//               }else{
+//                 overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
+//               }
 
                 overlayContent.innerHTML = embed.join('');
             }else{
@@ -82,7 +107,34 @@ function openNav(movie) {
     })
     
   }
+
+// display video 
+// function showVideos(){
+//   let embedClasses = document.querySelectorAll('.embed');
+//   let dots = document.querySelectorAll('.dot');
+
+//   totalVideos = embedClasses.length; 
+//   embedClasses.forEach((embedTag, idx) => {
+//     if(activeSlide == idx){
+//       embedTag.classList.add('show')
+//       embedTag.classList.remove('hide')
+
+//     }else{
+//       embedTag.classList.add('hide');
+//       embedTag.classList.remove('show')
+//     }
+//   })
+
+//   dots.forEach((dot, indx) => {
+//     if(activeSlide == indx){
+//       dot.classList.add('active');
+//     }else{
+//       dot.classList.remove('active')
+//     }
+//   })
+// }
   
+  /* Close when someone clicks on the "x" symbol inside the overlay */
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }

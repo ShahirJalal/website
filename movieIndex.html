@@ -12,16 +12,25 @@
     <header>
         <form id="form">
             <input type="text" id="search" class="search" placeholder="Search">
-        </form>
-  
-        <form id="genre">
+
             <select name="list" id="list" accesskey="target">
                 <option value='none' selected>Choose Genre</option>
             </select>
-            <input id= "go-button" type=button value="Go" onclick="goToNewPage()" />
+            
+            <button id="go-button">Go</button>
           </form>
   
     </header>
+
+    <div id="myNav" class="overlay">
+
+   
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+      
+        <div class="overlay-content" id="overlay-content"></div>
+      
+    </div>
 
     <main id="main"></main>
 
@@ -30,9 +39,9 @@
     
     <footer id="bottomButton">
         <div>
-          <button id="previous">Prev</button>
-          <span id="current">1</span>
-          <button id="next">Next</button>
+            <button id="previous">Prev</button>
+            <span id="current">1</span>
+            <button id="next">Next</button>
         </div>
     </footer>    
 
